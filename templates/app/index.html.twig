@@ -4,12 +4,10 @@
 
 {% block body %}
 
-<h1 style="font-family: Montserrat; font-weight:lighter; text-align:center;">Bienvenue dans la liste de vos cinémas</h1>
-
-<ul>
+<ul class="list-unstyled list-group col-3 ml-auto mr-auto mt-5">
     {% for cinema in cinemas %}
-    <li>
-        {{cinema.name}}
+    <li class="text-center list-group-item p-3">
+        <strong>{{cinema.name}}</strong>
         <br>{{cinema.description}}
     </li>
     {% endfor %}
