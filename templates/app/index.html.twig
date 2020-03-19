@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des cinémas{% endblock %}
+
+{% block body %}
+
+<h1 style="font-family: Montserrat; font-weight:lighter; text-align:center;">Bienvenue dans la liste de vos cinémas</h1>
+
+<ul>
+    {% for cinema in cinemas %}
+    <li>
+        {{cinema.name}}
+        <br>{{cinema.description}}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

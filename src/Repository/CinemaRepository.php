@@ -19,22 +19,19 @@ class CinemaRepository extends ServiceEntityRepository
         parent::__construct($registry, Cinema::class);
     }
 
-    // /**
-    //  * @return Cinema[] Returns an array of Cinema objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @return Cinema[] Returns an array of Cinema objects
+     *
+    */
+    public function findLastTenElements()
     {
-        return $this->createQueryBuilder('c')
-            ->andWhere('c.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('c.id', 'ASC')
+        return $this->createQueryBuilder('r')
+            ->orderBy('r.createdAt', 'DESC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
-        ;
+            ;
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Cinema
