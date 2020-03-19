@@ -59,6 +59,11 @@ class CinemaController extends AbstractController
 
     }
 
+    /**
+     * Supprime un cinema
+     * @Route("cinema/{cinema}", name="cinema_delete", methods={"DELETE"})
+     * @param Cinema $cinema
+     */
     public function delete(Cinema $cinema)
     {
 
